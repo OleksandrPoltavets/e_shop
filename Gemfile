@@ -12,6 +12,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 
+gem 'devise'
+
 group :development, :test do
 end
 

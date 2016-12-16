@@ -1,0 +1,16 @@
+<h2>Products</h2>
+
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="col-sm-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <div class="caption">
+          <h2><%= product.name %></h2>
+          <p><strong>Brand: </strong><%= product.brand %></p>
+          <p><strong>Model: </strong><%= product.model %></p>
+          <p><strong>Price: </strong><%= product.price %></p>
+        </div>
+      </a>
+    </div>
+  <% end %>
+</div>

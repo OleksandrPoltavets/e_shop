@@ -1,0 +1,20 @@
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h4 class="modal-title"><%= @product.name %></h4>
+    </div>
+    <div class="modal-body">
+      <p><strong>Brand: </strong><%= @product.brand %></p>
+      <p><strong>Model: </strong><%= @product.model %></p>
+      <p><strong>Price: </strong><%= @product.price %></p>
+      <p><strong>Description: </strong><%= @product.desc %></p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Add to cart</button>
+    </div>
+  </div>
+</div>

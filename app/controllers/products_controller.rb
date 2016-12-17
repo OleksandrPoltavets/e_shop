@@ -8,6 +8,14 @@ class ProductsController < ApplicationController
   def show
   end
 
+  def add_to_cart
+    if ProductToCart.new(current_user, @product).add
+      head :ok
+    else
+      head :unprocessable_entity
+    end
+  end
+
   private
 
   def set_product

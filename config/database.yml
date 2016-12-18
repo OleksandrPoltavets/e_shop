@@ -9,6 +9,12 @@ development:
   <<: *default
   database: e_shop_development
 
+production:
+  <<: *default
+  database: e_shop_production
+  username: deployer
+  password: deployer
+
 #test:
 #  <<: *default
 #  database: e_shop_test

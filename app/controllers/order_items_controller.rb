@@ -2,7 +2,7 @@ class OrderItemsController < ApplicationController
   before_action :set_order_item, except: [:index]
 
   def index
-    @order_items = OrderItem.all
+    @order_items = Order.active_order(current_user).order_items
   end
 
   def show

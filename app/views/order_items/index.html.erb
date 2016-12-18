@@ -1,11 +1,19 @@
 <h2>Order Items</h2>
 
 <div class="row">
-  <ol>
+  <ol class="orders-list">
     <% @order_items.each do |order_item| %>
       <li id="order_item_<%= order_item.id %>">
-        <%= order_item.product.name %>
-        <%= link_to 'remove', order_item_path(order_item), method: :delete, remote: true, data: {confirm: 'Are you sure?'} %>
+        <% order_item.product.name %>
+        <%= link_to order_item.product.name,
+                    product_path(order_item.product),
+                    remote: true %>
+        <%= link_to 'remove',
+                    order_item_path(order_item),
+                    method: :delete,
+                    remote: true,
+                    class: 'btn btn-danger btn-xs',
+                    data: {confirm: 'Are you sure?'} %>
       </li>
     <% end %>
   </ol>

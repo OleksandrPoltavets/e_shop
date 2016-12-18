@@ -1,0 +1,15 @@
+.products-list.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+  > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+  }
+  .thumbnail {
+    height: 230px;
+  }
+}
+

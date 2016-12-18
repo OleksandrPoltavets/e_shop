@@ -8,5 +8,6 @@
 
   - Setup Linux server
   https://www.digitalocean.com/community/tutorials/deploying-a-rails-app-on-ubuntu-14-04-with-capistrano-nginx-and-puma
-  
+  + sudo apt-get install nodejs
+  + sudo apt-get install libpq-dev
   

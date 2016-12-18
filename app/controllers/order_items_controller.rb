@@ -5,9 +5,6 @@ class OrderItemsController < ApplicationController
     @order_items = Order.active_order(current_user).order_items
   end
 
-  def show
-  end
-
   def destroy
     @order_item.destroy
     respond_to do |format|

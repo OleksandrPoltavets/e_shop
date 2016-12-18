@@ -9,10 +9,10 @@ class OrderItemsController < ApplicationController
   end
 
   def destroy
-    if @order_item.destroy
-      redirect_to order_items_url, notice: 'Successfully removed item from cart'
-    else
-      redirect_to order_items_url, error: 'Fail to remove item from cart!'
+    @order_item.destroy
+    respond_to do |format|
+      format.html { redirect_to order_items_url }
+      format.js
     end
   end
 

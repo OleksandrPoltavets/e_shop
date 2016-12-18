@@ -3,9 +3,9 @@
 <div class="row">
   <ol>
     <% @order_items.each do |order_item| %>
-      <li>
+      <li id="order_item_<%= order_item.id %>">
         <%= order_item.product.name %>
-        <%= link_to 'remove', order_item_path(order_item), method: :delete, data: {confirm: 'Are you sure?'} %>
+        <%= link_to 'remove', order_item_path(order_item), method: :delete, remote: true, data: {confirm: 'Are you sure?'} %>
       </li>
     <% end %>
   </ol>

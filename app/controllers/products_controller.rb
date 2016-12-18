@@ -9,11 +9,7 @@ class ProductsController < ApplicationController
   end
 
   def add_to_cart
-    if ProductToCart.new(current_user, @product).add
-      head :ok
-    else
-      head :unprocessable_entity
-    end
+    @product_to_cart = ProductToCart.new(current_user, @product).add
   end
 
   private

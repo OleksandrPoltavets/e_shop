@@ -4,7 +4,9 @@
 
 * Rails version 5.0.0
 
-* To run App locally
+
+
+## To run App locally
   
 1) git clone https://github.com/OleksandrPoltavets/e_shop
 
@@ -25,32 +27,21 @@
 9) Open http://localhost:3000 in your browser
 
 
-* Simple deployment instructions:
-
-  On your dev machine
-  
-  git clone https://github.com/OleksandrPoltavets/e_shop
-  
-  cd e_shop
+## Deployment instructions:
 
   For deployment you need Linux server with installed:
    
-  Ruby v2.3.3, Rails v5.0.0, RVM, GIT, NGINX, PUMA, PostgreSQL, NodeJS
+  Ruby v2.3.3, Rails v5.0.0, RVM, Git, Nginx, Puma, PostgreSQL, NodeJS
   
-  Here is the manual that can be used:
+  Here is the manual with gist that can be used:
   
-  Setup Linux server 
-  https://www.digitalocean.com/community/tutorials/deploying-a-rails-app-on-ubuntu-14-04-with-capistrano-nginx-and-puma
-      + sudo apt-get install nodejs
-      + sudo apt-get install libpq-dev
-      
-  Add deployer user to postgresql, allow user to create databases
+  * [Setup Linux server](https://gist.github.com/OleksandrPoltavets/449dd0eec06377c8a1d940f49939c4ea)
   
-  Change file config/deploy.rb with your server IP and user name
-  
-  Update config/database.production.yml with your deployer user password that you configured in 
+  * In app folder locally:
+    - change file config/deploy.rb with your server IP and user name
+    - update config/database.production.yml with your deployer user password that you configured in 
   postgresql on deployment server
   
-  Run 'cap production deploy:initial' from your dev machine
+    - run 'cap production deploy:initial' from your dev machine
   
-  Follow the steps of Capistrano tasks
+    - follow the steps of Capistrano 3 tasks

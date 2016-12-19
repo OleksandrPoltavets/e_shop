@@ -21,9 +21,15 @@ set :config_files, %w{config/database.yml config/secrets.yml}
 set :puma_conf, "#{shared_path}/config/puma.rb"
 
 namespace :deploy do
-  before 'check:linked_files', 'config:push'
-  before 'check:linked_files', 'puma:config'
-  before 'check:linked_files', 'puma:nginx_config'
-  before 'deploy:migrate', 'deploy:db:create'
-  after 'puma:smart_restart', 'nginx:restart'
+  task :initial do
+    on roles(:app) do
+      before 'deploy:check:linked_files', 'config:push'
+      before 'deploy:check:linked_files', 'puma:config'
+      before 'deploy:check:linked_files', 'puma:nginx_config'
+      before 'deploy:migrate', 'deploy:db:create'
+      after 'deploy:migrate', 'deploy:db:seed'
+      after 'puma:smart_restart', 'nginx:restart'
+      invoke 'deploy'
+    end
+  end
 end

@@ -33,7 +33,6 @@ group :development do
   gem 'capistrano-rails-db',          require: false
   gem 'capistrano-rails-console',     require: false
   gem 'capistrano-upload-config',     require: false
-  gem 'capistrano-rails-collection',  require: false
 
   gem 'web-console'
   gem 'listen', '~> 3.0.5'

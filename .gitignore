@@ -23,5 +23,5 @@
 .ruby-gemset
 .ruby-version
 .idea/
-/config/database.production.yml
-/config/secrets.production.yml
+#/config/database.production.yml
+#/config/secrets.production.yml
